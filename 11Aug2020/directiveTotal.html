@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+<title>AngularJS উদাহরণ</title>
+</head>
+<body>
+ 
+  <div data-ng-app="" data-ng-init="quantity='';price=''">
+
+    Quantity <input type="number" ng-model="quantity">
+    Price <input type="number" ng-model="price">
+
+    <p><b>Total</b> {{quantity * price}}
+ </div>
+  
+</body>
+</html>

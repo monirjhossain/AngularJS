@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+<title>AngularJS উদাহরণ</title>
+</head>
+<body ng-app="myApp">
+ <w3-test-directive></w3-test-directive>
+    
+     <script>
+            var app = angular.module("myApp", []);
+           app.directive("w3TestDirective", function() {
+                    return {
+                     template : "<h3>Making with directive</h3>" 
+                     };
+                 });
+        </script>
+ </body>
+</html>
