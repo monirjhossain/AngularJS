@@ -1,0 +1,30 @@
+1.filter-14page
+2. affected_rows
+3. select database command-USE DATABASE
+4. mysql annomous (mysql)
+5. mysql connection need parameter- USERNAME, USERPASSWORD, 
+6. select all descendent child – find()
+7. select table column location, dep_name from department
+8. transaction definition
+9. view definition
+10. order by
+11. Limit first three rows-  "SELECT * FROM Orders LIMIT  3";
+12. mysql configuration file
+13. show the structure of a table command
+14. show the variables
+15. prepared statement
+16. drop procedure procedure name
+17. remove all child nodes – empty()
+18. style use in Jquery- css()
+19. fetch array result
+20. Removes all matched elements from the DOM-remove()
+21. export command in mysql-MYSQLDUMP
+22. INSERT new values – INSERT INTO
+23. when working on database you need
+	1. OPEN A SERVER
+	2. WORK ON DATABASE
+	3.
+	4. ABOVE ALL
+24. 
+25. 
+

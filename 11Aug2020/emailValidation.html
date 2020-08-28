@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		span{
+			color: red;
+		}
+	</style>
+	<meta charset="UTF-8">
+	<title>email validation</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+</head>
+<body>
+	<h3>Email validation</h3>
+	<div ng-app="" name="myform">
+		<input type="text" name="myaddress" ng-model="text" >
+		<span ng-show="myform.myaddress.$error.email">invalid email address</span>
+	</div>
+</body>
+</html>
