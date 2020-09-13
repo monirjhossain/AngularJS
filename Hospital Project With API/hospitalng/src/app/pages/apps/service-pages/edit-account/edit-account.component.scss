@@ -1,0 +1,22 @@
+@import '~assets/sass/variables';
+
+:host {
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -($module-rem / 2);
+
+    .tc-badge {
+      margin: $module-rem / 2;
+    }
+  }
+}
+mat-form-field {
+  display: contents;
+}
+.mat-dialog-actions {
+  display: grid;
+}
+hr{
+  margin-top: 3%;
+}

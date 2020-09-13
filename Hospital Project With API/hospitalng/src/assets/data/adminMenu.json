@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Medicine",
+    "groupTitle": true
+  },
+  {
+    "title": "Hospitals",
+    "icon": {
+      "class": "tc-icon-wrap icofont-first-aid"
+    },
+    "routing": "hospitals"
+  },
+  {
+    "title": "Departments",
+    "icon": {
+      "class": "tc-icon-wrap icofont-first-aid"
+    },
+    "routing": "departments"
+  },
+    {
+    "title": "Appointments",
+    "icon": {
+      "class": "icofont-stethoscope-alt"
+    },
+	"sub": [
+    {
+		"title": "Appointments",
+		"routing": "appointments"
+    },
+    {
+		"title": "Appointments History",
+		"routing": "appointment-calendar"
+    }
+		]
+  },
+  {
+    "title": "Doctors",
+    "icon": {
+      "class": "icofont-doctor"
+    },
+    "routing": "doctors"
+  },
+  {
+    "title": "Employees",
+    "icon": {
+      "class": "icofont-nurse"
+    },
+    "routing": "employees"
+  },
+  {
+    "title": "Patients",
+    "icon": {
+      "class": "icofont-paralysis-disability"
+    },
+    "routing": "patients"
+  }
+]

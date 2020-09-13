@@ -1,0 +1,85 @@
+<mat-dialog-content>
+  <h1 mat-dialog-title>Update Appointment</h1>
+
+  <form [formGroup]="appointmentUpdateForm" #formDir="ngForm" novalidate>
+
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field>
+          <mat-label>Department</mat-label>
+          <mat-select formControlName="department">
+            <mat-option *ngFor="let dept of departmentList" (click)="searchDoctor(dept.departmentId)"
+               [value]="dept.name">
+              {{dept.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field>
+          <mat-label>Doctor</mat-label>
+          <mat-select formControlName="doctor" >
+            <mat-option *ngFor="let doc of selectedDoctorsList" [value]="doc.firstName">
+              {{doc.firstName}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Patient</mat-label>
+      <input matInput formControlName="customer" placeholder="Patient" autocomplete="off" value="{{data.customer}}">
+      <mat-icon matSuffix>perm_identity</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Slot Date</mat-label>
+      <input matInput [matDatepicker]="picker1" formControlName="slotDate" [value]="data.slotDate">
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field>
+          <mat-label>Slot Start Time</mat-label>
+          <input matInput formControlName="slotStartTime" type="time" placeholder="Slot Start Time"
+            value="{{data.slotStartTime}}" autocomplete="off">
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field>
+          <mat-label>Slot End Time</mat-label>
+          <input matInput formControlName="slotEndTime" type="time" placeholder="Slot End Time" autocomplete="off"
+            value="{{data.slotEndTime}}">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <mat-form-field >
+      <mat-label>Employee</mat-label>
+      <input matInput formControlName="employeeId" disabled="disabled" placeholder="Employee" autocomplete="off"
+        value="{{data.employeeId}}">
+      <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Payment</mat-label>
+      <input matInput formControlName="payment" type="number" placeholder="Payment" autocomplete="off"
+        value="{{data.payment}}">
+      <mat-icon matSuffix>payment</mat-icon>
+    </mat-form-field>
+
+    <mat-dialog-actions>
+      <div class="actions justify-content-between">
+        <button tc-button [type]="'button'" [view]="'error'" matDialogClose>Cancel</button>
+        <button tc-button [view]="'info'"  (click)="update()"
+          style="float: right;">
+          Update Appointment
+        </button>
+      </div>
+    </mat-dialog-actions>
+  </form>
+</mat-dialog-content>

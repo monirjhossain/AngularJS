@@ -1,0 +1,51 @@
+<div class="topMargin">
+    <div class="row">
+        <div class="col col-12 col-xl-4 col-md-5">
+            <img src="../../../../../assets/img/signinImg.jpg" alt="SignIn Img">
+        </div>
+
+        <div class="col col-12 col-xl-4 col-md-4">
+            <mat-card class="cardBg">
+
+                <h2 class="h4 mt-0 mb-1">Sign in</h2>
+                <p class="text-muted">Sign in to access your Account</p>
+                <form [formGroup]="signinForm" #formDir="ngForm" novalidate class="new-doctor-form mb-4">
+
+                    <mat-form-field  >
+                        <mat-label>Username</mat-label>
+                        <input matInput formControlName="username" type="text" name="username" placeholder="Username" required/>
+                        <mat-error>
+                          Username required
+                        </mat-error>
+                      </mat-form-field>
+                  
+                      
+                      <mat-form-field  >
+                        <mat-label>Password</mat-label>
+                        <input matInput formControlName="password" (keyup.enter)="authenticateUser()" type="password" name="password" placeholder="********" required/>
+                        <mat-error>
+                          Password required
+                        </mat-error>
+                      </mat-form-field>
+
+                      <p></p>
+
+                    <tc-form-group>
+                        <tc-switcher [value]="true">Remember me</tc-switcher>
+                    </tc-form-group>
+
+                    <div class="d-flex align-items-center">
+                        <button tc-button [type]="'button'" [afterIcon]="'icofont-login'" [view]="'accent'"
+                            [outline]="true" (click)="authenticateUser()">
+                            Login
+                        </button>
+                    </div>
+
+                </form>
+                <p class="mt-5 mb-1"><a href="#">Forgot password?</a></p>
+                <p>Don't have an account? <a href="./sign-up.html">Sign up!</a></p>
+
+            </mat-card>
+            </div>
+    </div>
+</div>

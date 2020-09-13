@@ -1,0 +1,120 @@
+<mat-dialog-content>
+  <h1 mat-dialog-title>Add Employee</h1>
+
+  <form [formGroup]="employeeUpdateForm" #formDir="ngForm" novalidate>
+
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field>
+          <input matInput formControlName="firstName" placeholder="Name" autocomplete="off">
+          <mat-icon matSuffix>perm_identity</mat-icon>
+          <mat-error *ngIf="employeeUpdateForm.controls['firstName'].hasError('required')">
+            First name is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field>
+          <input matInput formControlName="lastName" placeholder="Last Name" autocomplete="off">
+          <mat-icon matSuffix>perm_identity</mat-icon>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Phone Number</mat-label>
+      <input matInput formControlName="phone" placeholder="+123456789" autocomplete="off">
+      <mat-icon matSuffix>phone</mat-icon>
+      <mat-error *ngIf="employeeUpdateForm.controls['phone'].hasError('required')">
+        Phone number is required
+      </mat-error>
+    </mat-form-field>
+
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field>
+          <mat-label>Email Address</mat-label>
+          <input matInput formControlName="email" placeholder="pabcd@mail.com" autocomplete="off"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+          <mat-icon matSuffix>mail</mat-icon>
+          <mat-error *ngIf="employeeUpdateForm.controls['email'].hasError('required')">
+            Email Address is required
+          </mat-error>
+          <mat-error *ngIf="employeeUpdateForm.controls['email'].hasError('pattern')">
+            Email Address should be valid
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field>
+          <mat-label>User Name</mat-label>
+          <input matInput formControlName="username" autocomplete="off">
+          <mat-icon matSuffix>person</mat-icon>
+          <mat-error *ngIf="employeeUpdateForm.controls['username'].hasError('required')">
+            User Name is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" autocomplete="off"
+      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+      <mat-icon matSuffix>lock</mat-icon>
+      <mat-error *ngIf="employeeUpdateForm.controls['password'].hasError('required')">
+        Password is required
+      </mat-error>
+      <mat-error *ngIf="employeeUpdateForm.controls['password'].hasError('pattern')">
+        Must contain at least one number and one uppercase and lowercase letter
+      </mat-error>
+      <mat-error *ngIf="employeeUpdateForm.controls['password'].hasError('minlength')">
+        At least 8 or more characters
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Country</mat-label>
+      <mat-select formControlName="country">
+        <mat-option *ngFor="let country of countries"
+          [value]="country.name">
+          {{country.name}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="employeeUpdateForm.controls['country'].hasError('required')">
+        Country is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Address</mat-label>
+      <input matInput formControlName="address" autocomplete="off">
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-error *ngIf="employeeUpdateForm.controls['address'].hasError('required')">
+        Address is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Hospital</mat-label>
+      <mat-select formControlName="hospital">
+        <mat-option *ngFor="let hos of hospitals"
+          [value]="hos.name">
+          {{hos.name}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="employeeUpdateForm.controls['hospital'].hasError('required')">
+        Hospital is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-dialog-actions>
+      <div class="actions justify-content-between">
+        <button tc-button [type]="'button'" [view]="'error'" matDialogClose>Cancel</button>
+        <button tc-button [view]="'info'" (click)="registerEmployee()" style="float: right;">
+          Save Employee
+        </button>
+      </div>
+    </mat-dialog-actions>
+  </form>
+</mat-dialog-content>

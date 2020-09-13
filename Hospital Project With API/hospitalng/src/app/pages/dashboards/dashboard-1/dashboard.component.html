@@ -1,0 +1,83 @@
+<div class="row">
+  <div class="col col-12 col-md-6 col-xl-3">
+    <tc-card [tcBgColor]="'#fbfbfb'" class="animated fadeInUp delay-01s">
+      <div class="row align-items-center">
+        <div class="col col-5">
+          <tc-icon
+            [tcColor]="'rgba(51,108,251,0.5)'"
+            [tcFontSize]="48"
+            [iconClass]="'icofont-stethoscope-alt'"
+            [padding]="0"
+          ></tc-icon>
+        </div>
+
+        <div class="col col-7">
+          <h6 class="mt-0 mb-1">Appointments</h6>
+          <div class="count" [tcFontSize]="20" [tcColor]="'#336cfb'">{{appointmentsLength}}</div>
+        </div>
+      </div>
+    </tc-card>
+  </div>
+
+  <div class="col col-12 col-md-6 col-xl-3">
+    <tc-card [tcBgColor]="'#fbfbfb'" class="animated fadeInUp delay-02s">
+      <div class="row align-items-center">
+        <div class="col col-5">
+          <tc-icon
+            [tcColor]="'rgba(51,108,251,0.5)'"
+            [tcFontSize]="48"
+            [iconClass]="'icofont-wheelchair'"
+            [padding]="0"
+          ></tc-icon>
+        </div>
+
+        <div class="col col-7">
+          <h6 class="mt-0 mb-1 nowrap">Patients</h6>
+          <div class="count" [tcFontSize]="20" [tcColor]="'#336cfb'">{{customersLength}}</div>
+        </div>
+      </div>
+    </tc-card>
+  </div>
+
+  <div class="col col-12 col-md-6 col-xl-3">
+    <tc-card [tcBgColor]="'#fbfbfb'" class="animated fadeInUp delay-03s">
+      <div class="row align-items-center">
+        <div class="col col-5">
+          <tc-icon
+            [tcColor]="'rgba(51,108,251,0.5)'"
+            [tcFontSize]="48"
+            [iconClass]="'icofont-nurse'"
+            [padding]="0"
+          ></tc-icon>
+        </div>
+
+        <div class="col col-7">
+          <h6 class="mt-0 mb-1">Employees</h6>
+          <div class="count" [tcFontSize]="20" [tcColor]="'#336cfb'">{{employeesLength}}</div>
+        </div>
+      </div>
+    </tc-card>
+  </div>
+
+  <div class="col col-12 col-md-6 col-xl-3">
+    <tc-card [tcBgColor]="'#fbfbfb'" class="animated fadeInUp delay-04s">
+      <div class="row align-items-center">
+        <div class="col col-5">
+          <tc-icon
+            [tcColor]="'rgba(51,108,251,0.5)'"
+            [tcFontSize]="48"
+            [iconClass]="'icofont-doctor'"
+            [padding]="0"
+          ></tc-icon>
+        </div>
+
+        <div class="col col-7">
+          <h6 class="mt-0 mb-1 nowrap">Doctors</h6>
+          <div class="count" [tcFontSize]="20" [tcColor]="'#336cfb'">{{doctorsLength}}</div>
+        </div>
+      </div>
+    </tc-card>
+  </div>
+</div>
+
+<img src="../../../../assets/img/dash.jpg" alt="" style="width: 100%; height: auto;">

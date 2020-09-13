@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Medicine",
+    "groupTitle": true
+  },
+  {
+    "title": "Departments",
+    "icon": {
+      "class": "tc-icon-wrap icofont-first-aid"
+    },
+    "routing": "departments"
+  },
+  {
+    "title": "Employees",
+    "icon": {
+      "class": "icofont-nurse"
+    },
+    "routing": "employees"
+  }
+]

@@ -1,0 +1,23 @@
+@import '~assets/sass/variables';
+
+:host {
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -($module-rem / 2);
+
+    .tc-badge {
+      margin: $module-rem / 2;
+    }
+  }
+}
+.topMargin{
+    margin: 8% 9% 20% 20%;
+}
+
+.cardBg{
+    background-color: #FDFCFA;
+}
+.mat-form-field {
+  display: block;
+}

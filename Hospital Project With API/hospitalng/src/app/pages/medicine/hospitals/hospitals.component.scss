@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+  }
+  th.mat-header-cell {
+    background-color: #E8E8E8;
+    color: black;
+    font-weight: bold;
+    font-size: 105%;
+}
+tr.mat-footer-row, tr.mat-row {
+    background-color: #F9F9F9;
+}
+tr.mat-header-row {
+  height: 47px;
+}
+mat-form-field {
+  display: contents;
+}
